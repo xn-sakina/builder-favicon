@@ -1,0 +1,53 @@
+{
+  "name": "@xn-sakina/builder-favicon",
+  "version": "1.0.1",
+  "description": "Favicon builder",
+  "author": "fz6m",
+  "homepage": "https://github.com/xn-sakina/builder-favicon#README",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xn-sakina/builder-favicon"
+  },
+  "keywords": [
+    "favicon",
+    "builder",
+    "favicon-builder"
+  ],
+  "scripts": {
+    "dev": "esno ./index.ts",
+    "dev:tsc": "tsc -w",
+    "build": "tsc",
+    "prepublishOnly": "pnpm format && pnpm build",
+    "format": "prettier --write --cache --parser=typescript index.ts",
+    "push": "npm publish --registry=https://registry.npmjs.com"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "bin": {
+    "xn-fav": "bin/xn-fav.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^10.0.0",
+    "fs-extra": "^11.1.0",
+    "sharp": "^0.31.3",
+    "to-ico": "^1.1.5"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "18.11.18",
+    "@types/sharp": "^0.31.1",
+    "@types/to-ico": "^1.1.1",
+    "@xn-sakina/mental": "^2.0.0",
+    "esno": "^0.16.3",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@7.24.2"
+}
